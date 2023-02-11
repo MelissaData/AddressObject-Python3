@@ -7,9 +7,9 @@ dir = os.getcwd()
 
 
 if (os.name == 'nt'):
-  lib = ctypes.CDLL(f'{dir}/MelissaDataAddressObjectWindowsPython3Sample/mdAddr.dll')
+  lib = ctypes.CDLL(f'{dir}/MelissaAddressObjectWindowsPython3/mdAddr.dll')
 else:
-  lib = ctypes.CDLL(f'{dir}/MelissaDataAddressObjectLinuxPython3Sample/libmdPhone.so')
+  lib = ctypes.CDLL(f'{dir}/MelissaAddressObjectLinuxPython3/libmdPhone.so')
 
 
 lib.mdAddrCreate.argtypes = []

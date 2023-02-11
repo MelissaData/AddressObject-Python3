@@ -1,5 +1,5 @@
-# Name:    MelissaDataAddressObjectWindowsPython3Sample
-# Purpose: Use the Melissa Updater to make the MelissaDataAddressObjectWindowsPython3 sample usable
+# Name:    MelissaAddressObjectWindowsPython3
+# Purpose: Use the Melissa Updater to make the MelissaAddressObjectWindowsPython3 code usable
 
 
 ######################### Parameters ##########################
@@ -34,7 +34,7 @@ $ProductName = "DQ_ADDR_DATA"
 # Modify this if you want to use 
 $CurrentPath = $PSScriptRoot
 Set-Location $CurrentPath
-$ProjectPath = "$CurrentPath\MelissaDataAddressObjectWindowsPython3Sample"
+$ProjectPath = "$CurrentPath\MelissaAddressObjectWindowsPython3"
 $DataPath = "$ProjectPath\Data"
 
 If (!(Test-Path $DataPath)) {
@@ -119,7 +119,7 @@ function CheckDLLs() {
 
 ########################## Main ############################
 
-Write-Host "`n================ Sample of Melissa Data Address Object ================`n                    [ Python3 | Windows | 64BIT ]`n"
+Write-Host "`n======================= Melissa Address Object ========================`n                    [ Python3 | Windows | 64BIT ]`n"
 
 # Get license (either from parameters or user input)
 if ([string]::IsNullOrEmpty($license) ) {
@@ -155,14 +155,11 @@ if (!$DLLsAreDownloaded) {
 
 Write-Host "All file(s) have been downloaded/updated! "
 
-# Start sample
-# Build project
-Write-Host "`n=========================== BUILD PROJECT ============================="
-
+# Start
 # Run project
 if ([string]::IsNullOrEmpty($address)) {
-  python3 MelissaDataAddressObjectWindowsPython3Sample/MelissaDataAddressObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath
+  python3 MelissaAddressObjectWindowsPython3/MelissaAddressObjectWindowsPython3.py --license $License  --dataPath $DataPath
 }
 else {
-  python3 MelissaDataAddressObjectWindowsPython3Sample/MelissaDataAddressObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath --address $address --city $city --state $state --zip $zip
+  python3 MelissaAddressObjectWindowsPython3/MelissaAddressObjectWindowsPython3.py --license $License  --dataPath $DataPath --address $address --city $city --state $state --zip $zip
 }
