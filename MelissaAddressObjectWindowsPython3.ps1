@@ -158,8 +158,12 @@ Write-Host "All file(s) have been downloaded/updated! "
 # Start
 # Run project
 if ([string]::IsNullOrEmpty($address)) {
-  python3 MelissaAddressObjectWindowsPython3/MelissaAddressObjectWindowsPython3.py --license $License  --dataPath $DataPath
+  Push-Location MelissaAddressObjectWindowsPython3
+  python3 MelissaAddressObjectWindowsPython3.py --license $License  --dataPath $DataPath
+  Pop-Location
 }
 else {
-  python3 MelissaAddressObjectWindowsPython3/MelissaAddressObjectWindowsPython3.py --license $License  --dataPath $DataPath --address $address --city $city --state $state --zip $zip
+  Push-Location MelissaAddressObjectWindowsPython3
+  python3 MelissaAddressObjectWindowsPython3.py --license $License  --dataPath $DataPath --address $address --city $city --state $state --zip $zip
+  Pop-Location
 }
