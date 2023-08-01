@@ -86,16 +86,16 @@ def parse_arguments():
         if (arg == "--license") or (arg == "-l"):
             if (args[index+1] != None):
                 license = args[index+1]
-        if (arg == "--address") or (arg == "-p"):
+        if (arg == "--address") or (arg == "-a"):
             if (args[index+1] != None):
                 test_address = args[index+1]
-        if (arg == "--city") or (arg == "-p"):
+        if (arg == "--city") or (arg == "-c"):
             if (args[index+1] != None):
                 test_city = args[index+1]
-        if (arg == "--state") or (arg == "-p"):
+        if (arg == "--state") or (arg == "-s"):
             if (args[index+1] != None):
                 test_state = args[index+1]
-        if (arg == "--zip") or (arg == "-p"):
+        if (arg == "--zip") or (arg == "-z"):
             if (args[index+1] != None):
                 test_zip = args[index+1]
         if (arg == "--dataPath") or (arg == "-d"):
@@ -119,10 +119,10 @@ def run_as_console(license, test_address, test_city, test_state, test_zip, data_
     while should_continue_running:
         if (test_address == None or test_address == "") and (test_city == None or test_city == "") and (test_state == None or test_state == "") and (test_state == None or test_state == ""):
             print("\nFill in each value to see the Address Object results")
-            address = str(input("Address Line 1: "))
-            city =    str(input("          City: "))
-            state =   str(input("         State: "))
-            zip =     str(input("           Zip: "))
+            address = str(input("Address: "))
+            city =    str(input("City: "))
+            state =   str(input("State: "))
+            zip =     str(input("Zip: "))
         else:
             address = test_address
             city = test_city
@@ -133,7 +133,7 @@ def run_as_console(license, test_address, test_city, test_state, test_zip, data_
 
         """ Print user input """
         print("\n=============================== INPUTS ================================\n")
-        print(f"               Address Line 1: {data.address}")
+        print(f"                      Address: {data.address}")
         print(f"                         City: {data.city}")
         print(f"                        State: {data.state}")
         print(f"                          Zip: {data.zip}")
@@ -144,26 +144,18 @@ def run_as_console(license, test_address, test_city, test_state, test_zip, data_
         print("\n=============================== OUTPUT ================================\n")
         print("\n\tAddress Object Information:")
 
-        print(
-            f"\t                          MAK: {address_object.md_address_obj.GetMelissaAddressKey()}")
-        print(
-            f"\t               Address Line 1: {address_object.md_address_obj.GetAddress()}")
-        print(
-            f"\t               Address Line 2: {address_object.md_address_obj.GetAddress2()}")
-        print(
-            f"\t                         City: {address_object.md_address_obj.GetCity()}")
-        print(
-            f"\t                        State: {address_object.md_address_obj.GetState()}")
-        print(
-            f"\t                          Zip: {address_object.md_address_obj.GetZip()}")
-
-        print(
-            f"\t                 Result Codes: {data_container.result_codes}")
+        print(f"\t                      MAK: {address_object.md_address_obj.GetMelissaAddressKey()}")
+        print(f"\t           Address Line 1: {address_object.md_address_obj.GetAddress()}")
+        print(f"\t           Address Line 2: {address_object.md_address_obj.GetAddress2()}")
+        print(f"\t                     City: {address_object.md_address_obj.GetCity()}")
+        print(f"\t                    State: {address_object.md_address_obj.GetState()}")
+        print(f"\t                      Zip: {address_object.md_address_obj.GetZip()}")
+        print(f"\t             Result Codes: {data_container.result_codes}")
 
         rs = data_container.result_codes.split(',')
         for r in rs:
             print(
-                f"        {r}: {address_object.md_address_obj.GetResultCodeDescription(r, mdAddr_pythoncode.ResultCdDescOpt.ResultCodeDescriptionLong)}")
+                f"            {r}: {address_object.md_address_obj.GetResultCodeDescription(r, mdAddr_pythoncode.ResultCdDescOpt.ResultCodeDescriptionLong)}")
 
         is_valid = False
         if not (test_address == None or test_address == ""):
