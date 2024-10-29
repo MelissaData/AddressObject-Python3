@@ -28,7 +28,7 @@ And return
 
 ## Tested Environments
 - Windows 10 64-bit Python 3.8.7, Powershell 5.1
-- Melissa data files for 2024-09
+- Melissa data files for 2024-10
 
 ## Required File(s) and Programs
 
@@ -104,8 +104,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-$ git clone https://github.com/MelissaData/AddressObject-Python3
-$ cd AddressObject-Python3
+git clone https://github.com/MelissaData/AddressObject-Python3
+cd AddressObject-Python3
 ```
 
 #### Set up Melissa Updater 
@@ -143,11 +143,11 @@ When you have modified the script to match your data location, let's run the scr
 
 	The script will prompt the user for an address, city, state, and zip, then use the provided inputs to test Address Object. For example:
 	```
-	$ .\MelissaAddressObjectWindowsPython3.ps1
+	.\MelissaAddressObjectWindowsPython3.ps1
 	```
 	For quiet mode:
 	```
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -quiet
+	.\MelissaAddressObjectWindowsPython3.ps1 -quiet
 	```
 - Command Line 
 
@@ -155,20 +155,20 @@ When you have modified the script to match your data location, let's run the scr
 
 	With all parameters:
 	```
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688"
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688" -license "<your_license_string>"
+	.\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688"
+	.\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688" -license "<your_license_string>"
 	```
 
 	With any known (optional) parameters:
 	```
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -state "CA" 
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -state "CA" -license "<your_license_string>"
+	.\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -state "CA" 
+	.\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -state "CA" -license "<your_license_string>"
 	```
 
 	For quiet mode:
 	```
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688" -quiet
-	$ .\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688" -license "<your_license_string>" -quiet
+	.\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688" -quiet
+	.\MelissaAddressObjectWindowsPython3.ps1 -address "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -zip "92688" -license "<your_license_string>" -quiet
 	```
 
 This is the expected output from a successful setup for interactive mode:
