@@ -5,7 +5,7 @@ This code showcases the Melissa Address Object using Python3.
 
 Please feel free to copy or embed this code to your own project. Happy coding!
 
-For the latest Melissa Address Object release notes, please visit: https://releasenotes.melissa.com/on-premise-api/address-object/
+To view the latest Melissa Address Object release notes or to subscribe to product notifications, please visit: https://releasenotes.melissa.com/on-premise-api/address-object/
 
 For further details, please visit: https://docs.melissa.com/on-premise-api/address-object/address-object-quickstart.html
 
@@ -27,8 +27,8 @@ And return
 - Result Codes
 
 ## Tested Environments
-- Windows 10 64-bit Python 3.8.7, Powershell 5.1
-- Melissa data files for 2026-01
+- Windows 11 64-bit Python 3.8.7, Powershell 5.1
+- Melissa data files for 2026-02
 
 ## Required File(s) and Programs
 
@@ -104,8 +104,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-git clone https://github.com/MelissaData/AddressObject-Python3
-cd AddressObject-Python3
+git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/python3/melissaaddressobjectwindowspython3sample
+cd MelissaAddressObjectWindowsPython3
 ```
 
 #### Set up Melissa Updater 
