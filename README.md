@@ -111,8 +111,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/python3/melissaaddressobjectwindowspython3sample
-cd MelissaAddressObjectWindowsPython3
+git clone https://github.com/MelissaData/AddressObject-Python3
+cd AddressObject-Python3
 ```
 
 #### Set up Melissa Updater 
